@@ -1,6 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -34,17 +34,14 @@ module.exports = {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource',
         generator: {
-          filename: '[name][hash][ext]'
-        }
+          filename: '[name][hash][ext]',
+        },
       },
     ],
   },
   optimization: {
     minimize: true,
-    minimizer: [
-      '...',
-      new CssMinimizerPlugin(),
-    ],
+    minimizer: ['...', new CssMinimizerPlugin()],
   },
   devtool: 'inline-source-map',
   devServer: {
