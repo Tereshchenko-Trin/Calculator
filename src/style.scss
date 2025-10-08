@@ -1,49 +1,124 @@
 @font-face {
-  font-family: 'roboto';
-  src: url('./fonts/roboto-regular.woff2') format('woff2');
+  font-family: 'montserrat';
+  src: url('./fonts/montserrat-regular.woff2') format('woff2');
   font-weight: 400;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'roboto';
-  src: url('./fonts/roboto-medium.woff2') format('woff2');
+  font-family: 'montserrat';
+  src: url('./fonts/montserrat-medium.woff2') format('woff2');
   font-weight: 500;
   font-display: swap;
 }
 
-@font-face {
-  font-family: 'roboto';
-  src: url('./fonts/roboto-bold.woff2') format('woff2');
-  font-weight: 700;
-  font-display: swap;
-}
-
-* {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: 'roboto', 'sans-serif';
-  font-size: 16px;
+  box-sizing: border-box;  
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100dvh;
+  font-family: 'montserrat', 'sans-serif';
+  font-size: 20px;
   font-weight: 500;
   line-height: 22px;
+  color: #fff;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
 }
 
 .calculator {
+  display: flex;
+  flex-direction: column;
+  max-width: 250px;
+  width: 100%;
+  background-color: #535353;
+  padding: 2px 2px;
+  border-radius: 10px;
+
   &__display-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 30px 10px 10px;
+    align-items: end;
   }
 
   &__display {
     &_previous {
+      font-weight: 400;
+      font-size: 16px;
+      color: #7D7D7D;
     }
 
     &_current {
+      font-weight: 400;
+      font-size: 34px;
     }
   }
 
   &__buttons-wrapper {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
   }
 
   &__button {
+    width: 100%;
+    min-height: 50px;
+    background-color: #7D7D7D;
+    color: #fff;
+    border: none;
+    transition: background-color 0.4s ease;
+  }
+
+  &__button:hover {
+    background-color: #727272;
+  }
+
+  &__button-percent, &__button-clear, &__button-sign {
+    background-color: #646464;
+  }
+
+  &__button-percent:hover, &__button-clear:hover, &__button-sign:hover {
+    background-color: #5a5a5a;
+  }
+
+  &__button:active, &__button-percent:active, &__button-clear:active, &__button-sign:active {
+    background-color: #999999;
+  }
+
+  &__button-operator {
+    background-color: #F1A33B;
+  }
+
+  &__button-operator:hover {
+    background-color: rgb(241, 148, 40);
+  }
+
+  &__button-operator:active {
+    background-color: rgb(240, 183, 118);
+  }
+
+  &__button-zero {
+    grid-area: 5 / 1 / 5 / 3;
+    border-radius: 0px 0px 0px 9px;
+  }
+  
+  &__buttons-wrapper > :last-child {
+    border-radius: 0px 0px 9px 0px;
   }
 }
