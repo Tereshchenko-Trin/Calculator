@@ -17,7 +17,7 @@
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;  
+  box-sizing: border-box;
 }
 
 body {
@@ -63,7 +63,7 @@ button {
     &_previous {
       font-weight: 400;
       font-size: 16px;
-      color: #7D7D7D;
+      color: #7d7d7d;
     }
 
     &_current {
@@ -84,7 +84,7 @@ button {
   &__button {
     width: 100%;
     min-height: 50px;
-    background-color: #7D7D7D;
+    background-color: #7d7d7d;
     color: #fff;
     border: none;
     transition: background-color 0.4s ease;
@@ -94,20 +94,27 @@ button {
     background-color: #727272;
   }
 
-  &__button-percent, &__button-clear, &__button-sign {
+  &__button-percent,
+  &__button-clear,
+  &__button-sign {
     background-color: #646464;
   }
 
-  &__button-percent:hover, &__button-clear:hover, &__button-sign:hover {
+  &__button-percent:hover,
+  &__button-clear:hover,
+  &__button-sign:hover {
     background-color: #5a5a5a;
   }
 
-  &__button:active, &__button-percent:active, &__button-clear:active, &__button-sign:active {
+  &__button:active,
+  &__button-percent:active,
+  &__button-clear:active,
+  &__button-sign:active {
     background-color: #999999;
   }
 
   &__button-operator {
-    background-color: #F1A33B;
+    background-color: #f1a33b;
   }
 
   &__button-operator:hover {
@@ -122,7 +129,7 @@ button {
     grid-area: 5 / 1 / 5 / 3;
     border-radius: 0px 0px 0px 9px;
   }
-  
+
   &__buttons-wrapper > :last-child {
     border-radius: 0px 0px 9px 0px;
   }
