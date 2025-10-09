@@ -1,0 +1,11 @@
+{
+  "builds": [
+    {
+      "src": "webpack.config.cjs",
+      "use": "@vercel/static-build",
+      "config": {}
+    }
+  ],
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist"
+}
