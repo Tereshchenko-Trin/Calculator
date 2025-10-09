@@ -7,7 +7,7 @@ module.exports = {
   mode: 'production',
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'src', 'index.html'),
+      template: path.resolve(__dirname, 'public', 'index.html'),
       minify: {
         collapseWhitespace: true,
         removeComments: true,
