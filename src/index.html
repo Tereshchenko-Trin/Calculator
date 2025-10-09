@@ -8,29 +8,29 @@
   <body>
     <div class="calculator">
       <div class="calculator__display-wrapper">
-        <div class="calculator__display calculator__display_previous">20+30</div>
-        <div class="calculator__display calculator__display_current">50</div>
+        <div class="calculator__display calculator__display_previous" id="previous-value"></div>
+        <div class="calculator__display calculator__display_current" id="current-value"></div>
       </div>
-      <div class="calculator__buttons-wrapper">
-        <button class="calculator__button calculator__button-clear" type="button">AC</button>
-        <button class="calculator__button calculator__button-sign" type="button">+/-</button>
-        <button class="calculator__button calculator__button-percent" type="button">&percnt;</button>
-        <button class="calculator__button calculator__button-operator" type="button">&divide;</button>
-        <button class="calculator__button" type="button">7</button>
-        <button class="calculator__button" type="button">8</button>
-        <button class="calculator__button" type="button">9</button>
-        <button class="calculator__button calculator__button-operator" type="button">&times;</button>
-        <button class="calculator__button" type="button">4</button>
-        <button class="calculator__button" type="button">5</button>
-        <button class="calculator__button" type="button">6</button>
-        <button class="calculator__button calculator__button-operator" type="button">&minus;</button>
-        <button class="calculator__button" type="button">1</button>
-        <button class="calculator__button" type="button">2</button>
-        <button class="calculator__button" type="button">3</button>
-        <button class="calculator__button calculator__button-operator" type="button">&plus;</button>
-        <button class="calculator__button calculator__button-zero" type="button">0</button>
-        <button class="calculator__button" type="button">,</button>
-        <button class="calculator__button calculator__button-operator" type="button">&equals;</button>
+      <div class="calculator__buttons-wrapper" id="buttons-wrapper">
+        <button class="calculator__button calculator__button-clear" type="button" data-type="clear">AC</button>
+        <button class="calculator__button calculator__button-sign" type="button" data-type="sign">+/-</button>
+        <button class="calculator__button calculator__button-percent" type="button" data-type="%">&percnt;</button>
+        <button class="calculator__button calculator__button-operator" type="button" data-type="/">&divide;</button>
+        <button class="calculator__button" type="button" data-type="7">7</button>
+        <button class="calculator__button" type="button" data-type="8">8</button>
+        <button class="calculator__button" type="button" data-type="9">9</button>
+        <button class="calculator__button calculator__button-operator" type="button" data-type="*">&times;</button>
+        <button class="calculator__button" type="button" data-type="4">4</button>
+        <button class="calculator__button" type="button" data-type="5">5</button>
+        <button class="calculator__button" type="button" data-type="6">6</button>
+        <button class="calculator__button calculator__button-operator" type="button" data-type="-">&minus;</button>
+        <button class="calculator__button" type="button" data-type="1">1</button>
+        <button class="calculator__button" type="button" data-type="2">2</button>
+        <button class="calculator__button" type="button" data-type="3">3</button>
+        <button class="calculator__button calculator__button-operator" type="button" data-type="+">&plus;</button>
+        <button class="calculator__button calculator__button-zero" type="button" data-type="0">0</button>
+        <button class="calculator__button" type="button" data-type=",">,</button>
+        <button class="calculator__button calculator__button-operator" type="button" data-type="=">&equals;</button>
       </div>
     </div>
   </body>
