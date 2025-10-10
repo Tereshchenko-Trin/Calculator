@@ -1,5 +1,5 @@
 # Calculator
-A minimalist calculator app that can perform basic math operations. [Technical specifications](https://docs.google.com/document/d/1zpXXeSae-BlcxPKgw3DhxZA92cspVailrPYoaXSYrW8/edit?tab=t.0#heading=h.5dt3hghpa22f).
+A minimalist calculator app that can perform basic math operations. [Technical specifications](https://docs.google.com/document/d/1zpXXeSae-BlcxPKgw3DhxZA92cspVailrPYoaXSYrW8/edit?tab=t.0#heading=h.5dt3hghpa22f). You can [try it now](https://tereshchenko-trin.github.io/Calculator/).
 
 # Tech stack
 - Webpack — bundling and development server
