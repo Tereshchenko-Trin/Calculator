@@ -3,6 +3,9 @@ import {
   displayCurrentValueElement,
   displayPreviousValueElement,
 } from './declarations.js';
+import {themeIconElement} from './declarations.js';
+import iconDark from '../assets/icons/iconDark.svg';
+import iconLight from '../assets/icons/iconLight.svg';
 
 function appendNumber(number) {
   // сброс ошибки
@@ -126,4 +129,8 @@ function updateDisplay() {
     : '';
 }
 
-export {updateDisplay, handleOperation, chooseOperator, appendNumber};
+function updateThemeIcon(theme) {
+  themeIconElement.src = theme === 'light' ? iconLight : iconDark;
+}
+
+export {updateDisplay, handleOperation, chooseOperator, appendNumber, updateThemeIcon};
