@@ -1,4 +1,4 @@
-import {handleOperation, appendNumber, updateDisplay} from './helpers.js';
+import {handleOperation, appendNumber, updateDisplay, updateThemeIcon} from './helpers.js';
 
 function handleClickButtonItem({target}) {
   const type = target.dataset.type;
@@ -13,4 +13,11 @@ function handleClickButtonItem({target}) {
   updateDisplay();
 }
 
-export {handleClickButtonItem};
+function handleClickToggleTheme() {
+  const currentThemeElement = document.documentElement.getAttribute('data-theme');
+  const newTheme = currentThemeElement === 'light' ? 'dark' : 'light';
+  document.documentElement.setAttribute('data-theme', newTheme);
+  updateThemeIcon(newTheme);
+}
+
+export {handleClickButtonItem, handleClickToggleTheme};

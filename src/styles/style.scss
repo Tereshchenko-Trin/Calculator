@@ -1,24 +1,6 @@
-@font-face {
-  font-family: 'montserrat';
-  src: url('./assets/fonts/montserrat-regular.woff2') format('woff2');
-  font-weight: 400;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'montserrat';
-  src: url('./assets/fonts/montserrat-medium.woff2') format('woff2');
-  font-weight: 500;
-  font-display: swap;
-}
-
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@use './_fonts.scss';
+@use './recetStyles.scss';
+@use './variables.scss';
 
 body {
   display: flex;
@@ -29,12 +11,7 @@ body {
   font-size: 20px;
   font-weight: 500;
   line-height: 22px;
-  color: #fff;
-}
-
-button {
-  font: inherit;
-  cursor: pointer;
+  color: var(--text-color);
 }
 
 .calculator {
@@ -42,11 +19,26 @@ button {
   flex-direction: column;
   max-width: 250px;
   width: 100%;
-  background-color: #535353;
+  background-color: var(--bg-color);
   padding: 2px 2px;
   border-radius: 10px;
 
+  &__theme-toggle {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: none;
+    transition: transform 0.4s ease;
+    font-size: 10px;
+    color: var(--text-color);
+  }
+
+  &__theme-toggle > :only-child {
+    width: 20px;
+  }
+
   &__display-wrapper {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: end;
@@ -63,7 +55,7 @@ button {
     &_previous {
       font-weight: 400;
       font-size: 16px;
-      color: #7d7d7d;
+      color: var(--displat-previous);
     }
 
     &_current {
@@ -84,45 +76,44 @@ button {
   &__button {
     width: 100%;
     min-height: 50px;
-    background-color: #7d7d7d;
-    color: #fff;
-    border: none;
+    background-color: var(--button-bg);
+    color: var(--text-color);
     transition: background-color 0.4s ease;
   }
 
   &__button:hover {
-    background-color: #727272;
+    background-color: var(--button-hover);
   }
 
   &__button-percent,
   &__button-clear,
   &__button-sign {
-    background-color: #646464;
+    background-color: var(--secondary-bg);
   }
 
   &__button-percent:hover,
   &__button-clear:hover,
   &__button-sign:hover {
-    background-color: #5a5a5a;
+    background-color: var(--secondary-button-hover);
   }
 
   &__button:active,
   &__button-percent:active,
   &__button-clear:active,
   &__button-sign:active {
-    background-color: #999999;
+    background-color: var(--button-active);
   }
 
   &__button-operator {
-    background-color: #f1a33b;
+    background-color: var(--accent-color);
   }
 
   &__button-operator:hover {
-    background-color: rgb(241, 148, 40);
+    background-color: var(--accent-hover);
   }
 
   &__button-operator:active {
-    background-color: rgb(240, 183, 118);
+    background-color: var(--accent-active);
   }
 
   &__button-zero {
