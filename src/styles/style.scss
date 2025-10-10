@@ -25,8 +25,8 @@ body {
 
   &__theme-toggle {
     position: absolute;
-    top: 15px;
-    left: 15px;
+    top: 10px;
+    left: 10px;
     background: none;
     transition: transform 0.4s ease;
     font-size: 10px;
@@ -43,7 +43,7 @@ body {
     flex-direction: column;
     justify-content: end;
     gap: 10px;
-    padding: 30px 10px 10px;
+    padding: 40px 10px 10px;
     min-height: 95px;
     align-items: end;
     overflow: hidden;
@@ -52,6 +52,9 @@ body {
   }
 
   &__display {
+    white-space: normal;
+    word-break: break-all;
+
     &_previous {
       font-weight: 400;
       font-size: 16px;
@@ -60,7 +63,8 @@ body {
 
     &_current {
       font-weight: 400;
-      font-size: 34px;
+      font-size: 32px;
+      line-height: 34px;
     }
   }
 

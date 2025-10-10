@@ -9,7 +9,8 @@ import iconLight from '../assets/icons/iconLight.svg';
 
 function appendNumber(number) {
   // сброс ошибки
-  if (dataState.currentValue === 'Error') dataState.currentValue = '';
+  if (dataState.currentValue === 'Error' || dataState.currentValue === 'Infinity')
+    dataState.currentValue = '';
 
   // проверка на наличие разделителя, если есть - второй не добавится
   if (number === ',' && dataState.currentValue.includes('.')) return;
@@ -36,7 +37,11 @@ function appendNumber(number) {
 
 function handleOperation(type) {
   // блокировка работы с математическими операциями, только очистка и ввод чисел
-  if (dataState.currentValue === 'Error' && type !== 'clear') return;
+  if (
+    (dataState.currentValue === 'Error' || dataState.currentValue === 'Infinity') &&
+    type !== 'clear'
+  )
+    return;
 
   switch (type) {
     case 'clear':
