@@ -3,6 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
+  "homepage": "https://Tereshchenko-Trin.github.io/Calculator",
   "scripts": {
     "dev": "webpack serve --config webpack.config.cjs --mode development",
     "build": "webpack --config webpack.config.cjs --mode production",
@@ -10,7 +11,9 @@
     "lint": "eslint .",
     "format": "prettier --write .",
     "prepare": "husky && husky install",
-    "lint-staged": "lint-staged"
+    "lint-staged": "lint-staged",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "",
@@ -25,6 +28,7 @@
     "eslint": "^9.37.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.4",
+    "gh-pages": "^6.3.0",
     "globals": "^16.4.0",
     "html-webpack-plugin": "^5.6.4",
     "husky": "^9.1.7",
